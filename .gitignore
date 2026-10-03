@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caching y Entornos Virtuales
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+
+# Streamlit config/cache local
+.streamlit/
+
+# Entornos IDE (VS Code, PyCharm)
+.vscode/
+.idea/
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Datos exportados o temporales
+*.log
+*.csv
