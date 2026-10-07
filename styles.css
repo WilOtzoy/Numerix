@@ -1,39 +1,321 @@
-/* Estilo general */
+
 .main {
     padding-top: 1rem;
 }
 
-/* Tarjetas de Métricas (KPIs) */
+
+/*   TÍTULO PRINCIPAL */
+
+.gradient-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+
+    background: linear-gradient(
+        45deg,
+        #00D4FF,
+        #7A00FF
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 0.15rem;
+}
+
+
+/* TARJETAS DE MÉTRICAS*/
+
 .metric-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 16px;
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 14px;
+
+    padding: 18px 12px;
+
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(0, 212, 255, 0.35);
 }
 
 .metric-value {
     font-size: 1.8rem;
+
     font-weight: 700;
+
     color: #00D4FF;
+
     margin: 4px 0;
 }
 
 .metric-label {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
+
     color: #888;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
 }
 
-/* Título con gradiente moderno */
-.gradient-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    background: -webkit-linear-gradient(45deg, #00D4FF, #7A00FF);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.2rem;
+
+/*  ENLACES DE DOCUMENTACIÓN */
+
+.documentation-links {
+    text-align: right;
+
+    padding-top: 0.45rem;
+}
+
+.documentation-label {
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    color: #777;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 0.35rem;
+
+    text-align: right;
+}
+
+
+/*   BANNER DEL MÉTODO */
+
+.method-banner {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 212, 255, 0.07),
+            rgba(122, 0, 255, 0.06)
+        );
+
+    border: 1px solid
+        rgba(0, 212, 255, 0.12);
+
+    margin-bottom: 10px;
+}
+
+.method-label {
+    font-size: 0.70rem;
+
+    color: #888;
+
+    letter-spacing: 1.4px;
+
+    font-weight: 700;
+}
+
+.method-name {
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    margin-top: 2px;
+}
+
+.method-category {
+    font-size: 0.78rem;
+
+    color: #00D4FF;
+
+    border: 1px solid
+        rgba(0, 212, 255, 0.25);
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+}
+
+
+/*   PANTALLA DE BIENVENIDA */
+
+.welcome-card {
+    margin-top: 3rem;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 212, 255, 0.04),
+            rgba(122, 0, 255, 0.06)
+        );
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.welcome-icon {
+    font-size: 3rem;
+
+    margin-bottom: 10px;
+}
+
+.welcome-card h2 {
+    margin-bottom: 8px;
+}
+
+.welcome-card p {
+    max-width: 650px;
+
+    margin:
+        0 auto;
+
+    color: #888;
+
+    line-height: 1.6;
+}
+
+
+/* ENCABEZADO DE DOCUMENTACIÓN */
+
+.doc-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px 20px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.doc-icon {
+    font-size: 2rem;
+}
+
+.doc-title {
+    font-size: 1.25rem;
+
+    font-weight: 700;
+}
+
+.doc-subtitle {
+    color: #888;
+
+    font-size: 0.85rem;
+
+    margin-top: 2px;
+}
+
+
+/* CONTENEDOR DE DOCUMENTACIÓN */
+
+.documentation-container {
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 10px 25px 50px 25px;
+
+    line-height: 1.7;
+}
+
+
+/*  BOTONES */
+
+.stButton > button {
+    border-radius: 9px;
+
+    font-weight: 600;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.stButton > button:hover {
+    border-color: #00D4FF;
+
+    transform: translateY(-1px);
+}
+
+
+/*    SIDEBAR */
+
+section[data-testid="stSidebar"] {
+    border-right:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* DIVISORES */
+
+hr {
+    border-color:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+/* TABLAS */
+
+div[data-testid="stDataFrame"] {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/*    RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .gradient-title {
+        font-size: 2rem;
+    }
+
+    .method-banner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .documentation-links {
+        text-align: left;
+
+        margin-top: 10px;
+    }
+
+    .documentation-label {
+        text-align: left;
+    }
 }
