@@ -79,7 +79,6 @@ with st.sidebar:
         [
             "Métodos Cerrados",
             "Métodos Abiertos",
-            "Polinomios / Otros"
         ]
     )
 
@@ -90,7 +89,7 @@ with st.sidebar:
             "Método",
             [
                 "Bisección",
-                "Regula Falsi"
+                "Posicion falsa"
             ]
         )
 
@@ -105,15 +104,6 @@ with st.sidebar:
             ]
         )
 
-    else:
-
-        metodo = st.selectbox(
-            "Método",
-            [
-                "Müller",
-                "Bairstow"
-            ]
-        )
 
     st.markdown("---")
 
@@ -148,7 +138,7 @@ with st.sidebar:
 
     with col_a:
 
-        if metodo in ["Bisección", "Regula Falsi"]:
+        if metodo in ["Bisección", "Posicion falsa"]:
 
             param_a = st.number_input(
                 "Límite a",
@@ -171,7 +161,7 @@ with st.sidebar:
 
     with col_b:
 
-        if metodo in ["Bisección", "Regula Falsi"]:
+        if metodo in ["Bisección", "Posicion falsa"]:
 
             param_b = st.number_input(
                 "Límite b",
@@ -407,7 +397,7 @@ try:
             max_iter
         )
 
-    elif metodo == "Regula Falsi":
+    elif metodo == "Posicion falsa":
 
         raiz, fxr, err_rel, iters, df_iter = regula_falsi(
             func_input,
@@ -710,11 +700,11 @@ try:
                 r"x_r = \frac{a+b}{2}"
             )
 
-        elif metodo == "Regula Falsi":
+        elif metodo == "Posicion falsa":
 
             st.markdown(
                 """
-                El **Método de Regula Falsi** aproxima la raíz
+                El **Método de Posicion falsa** aproxima la raíz
                 utilizando una recta que une los puntos extremos
                 del intervalo.
                 """
